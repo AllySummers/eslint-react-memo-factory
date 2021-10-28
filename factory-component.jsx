@@ -2,8 +2,12 @@ import React from 'react';
 
 const UserContext = React.createContext({ user: null });
 
-const UserContextProvider = ({ children }) => { // imagine I'm a real context
-  return children
+const UserContextProvider = ({ children }) => {
+  return (
+    <UserContext.Provider value={{ /* this is a comment */ }}>
+      { children }
+    </UserContext.Provider>
+  )
 };
 
 const userFactoryWrapper1 = (user) => ({ children }) => (
@@ -13,10 +17,12 @@ const userFactoryWrapper1 = (user) => ({ children }) => (
 )
 
 const userFactoryWrapper2 = (user) => ({ children }) => {
-  const memoizedUser = React.useMemo(() => user, [user]);
+  const memoizedValue = React.useMemo(() => ({
+    user
+  }), [user]);
 
   return (
-    <UserContext.Provider value={{ user }}>
+    <UserContext.Provider value={memoizedValue}>
       { children }
     </UserContext.Provider>
   )

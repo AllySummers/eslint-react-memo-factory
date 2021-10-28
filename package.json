@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint not-working.tsx working.tsx"
+    "lint": "eslint factory-component.jsx"
   },
   "author": "",
   "license": "ISC",
