@@ -1,0 +1,18 @@
+{
+  "root": true,
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks"
+  ],
+  "rules": {
+    "react/jsx-no-constructed-context-values": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  }
+}
