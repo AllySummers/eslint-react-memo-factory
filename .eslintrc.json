@@ -13,6 +13,6 @@
   ],
   "rules": {
     "react/jsx-no-constructed-context-values": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "error"
   }
 }
